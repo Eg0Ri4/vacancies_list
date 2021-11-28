@@ -1,0 +1,15 @@
+.job{
+    display: grid;
+    cursor: pointer;
+    padding: 10px;
+    width:90%;
+    height: 20%;
+    margin:1%; 
+    border: 1px solid #e9ebed;
+    /*grid-template-rows:0.5fr 1fr 1fr 2fr;*/
+}
+.job:hover{
+    cursor: pointer;
+    z-index: 11;
+    border-color: #abb2ba;
+}
