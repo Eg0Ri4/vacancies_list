@@ -33,8 +33,10 @@ function show_all($admin){
         if($admin!=true){
             echo show_job($ids_array[$i]);
         }else{
-            $cross = "";
-            echo "" . show_job($ids_array[$i]) . $cross;
+            $cross = "<button style='width:5%; height:5%;'>
+            <img alt='cross' src='/assets/Red_X.png' style='width:100%; height:100%;'>
+            </button></div>";
+            echo "<div style='dispalay:flex;'>" . show_job($ids_array[$i]) . $cross;
         }
     }
 }
@@ -46,11 +48,5 @@ function login($name, $pass){
     }else{
         return false;
     }
-}
-function del_vac($id){
-    $msg = "deleted succsesfuly!";
-    mysqli_query(connect(), sprintf("DELETE FROM jobs WHERE id='%d'", $id));
-    header("Location: /admin.php?msg='" . $msg . "'");
-    exit();
 }
 ?>
